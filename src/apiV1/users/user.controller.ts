@@ -1,15 +1,13 @@
 import { Request, Response } from 'express';
 import * as bcrypt from 'bcrypt';
 import UserService from './user.service';
-import RoleService from '../roles/roles.service';
 import { UserResponseModel } from '../../models/users/userResponseModel';
 import { RolesResponseModel } from '../../models/roles/rolesResponseModel';
 
 export default class UserController {
     
     constructor(
-        private userService: UserService,
-        private roleService: RoleService
+        private userService: UserService
     ){
         
     }

@@ -3,12 +3,10 @@ import verifyToken from '../../helpers/verifyToken';
 import verifyAdmin from '../../helpers/verifyAdmin';
 import Controller from './user.controller';
 import UserService from './user.service';
-import RolesService from '../roles/roles.service';
 
 const userService = new UserService;
-const rolesService = new RolesService;
 const user: Router = Router();
-const controller = new Controller(userService, rolesService);
+const controller = new Controller(userService);
 
 // user.get('/', verifyToken, verifyAdmin, controller.findMany);
 
